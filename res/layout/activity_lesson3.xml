@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+	android:focusableInTouchMode="true" 
+    tools:context=".Lesson3Activity" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/Lesson3ControlLayout" >
+        <TextView
+        android:id="@+id/Lesson3TitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:freezesText="false"
+        android:gravity="center"
+        android:linksClickable="false"
+        android:longClickable="false"
+        android:selectAllOnFocus="false" />
+
+    <EditText
+        android:id="@+id/uriToTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Lesson3TitleTextView"
+        android:layout_marginTop="24dp"
+        android:duplicateParentState="false"
+        android:ems="10"
+        android:inputType="textUri"
+        android:text="@string/uriTestString"
+        android:textSize="16sp" >
+    </EditText>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="46dp" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_above="@+id/lesson3SubmitButton"
+        android:layout_below="@+id/uriToTest" />
+
+    <Button
+        android:id="@+id/lesson3SubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="61dp"
+        android:onClick="lesson3OnSubmitClick"
+        android:text="@string/lesson3ButtonSubmit" />
+    </RelativeLayout>
+
+    
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <SlidingDrawer
+            android:id="@+id/slidingDrawer3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:allowSingleTap="true"
+            android:content="@+id/content"
+            android:handle="@+id/handle"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:rotation="180"
+            android:topOffset="45dp" >
+
+            <Button
+                android:id="@+id/handle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="none"
+                android:gravity="center_vertical|center_horizontal|clip_vertical"
+                android:minHeight="30sp"
+                android:rotation="180"
+                android:text="@string/stringInstructions"
+                android:textColor="#91D685"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="306dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:rotation="180"
+                    android:text="@string/lesson3Description"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </SlidingDrawer>
+
+    </RelativeLayout>
+
+</RelativeLayout>

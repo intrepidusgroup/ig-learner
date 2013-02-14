@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lesson6Activity" >
+
+    <RelativeLayout
+        android:id="@+id/Lesson6ControlLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+     	<Button
+        android:id="@+id/Lesson6ButtonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp"
+        android:hint="@string/Lesson6Hint"
+        android:onClick="lesson6OnSubmitClick"
+        android:text="@string/lesson6ButtonSubmit" />
+
+    <EditText
+        android:id="@+id/Lesson6EditText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Lesson6ButtonSubmit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:hint="@string/Lesson6Hint" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/Lesson6NewNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/Lesson6EditText1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/LabelChallengePhoneNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/Lesson6NewNumberTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="@string/lesson6NewChallengeNumberString"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    </RelativeLayout>
+
+   
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <SlidingDrawer
+            android:id="@+id/slidingDrawer6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:allowSingleTap="true"
+            android:content="@+id/content"
+            android:handle="@+id/handle"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:rotation="180"
+            android:topOffset="45dp" >
+
+            <Button
+                android:id="@+id/handle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="none"
+                android:gravity="center_vertical|center_horizontal|clip_vertical"
+                android:minHeight="30sp"
+                android:rotation="180"
+                android:text="@string/stringInstructions"
+                android:textColor="#91D685"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="306dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:rotation="180"
+                    android:text="@string/lesson6Description"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+        </SlidingDrawer>
+
+    </RelativeLayout>
+
+</RelativeLayout>

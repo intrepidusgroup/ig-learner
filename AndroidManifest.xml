@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.intrepidusgroup.learner"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.intrepidusgroup.learner.LessonSelectorActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="com.intrepidusgroup.learner.Lesson1Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:icon="@drawable/ic_lesson1"
+            android:label="@string/title_activity_lesson1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" 
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.intrepidusgroup.learner.LessonSelectorActivity" />
+        </activity>
+        <activity
+            android:name="com.intrepidusgroup.learner.Lesson2Activity"
+            android:icon="@drawable/ic_lesson2"
+            android:label="@string/title_activity_lesson2"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.intrepidusgroup.learner.LessonSelectorActivity" />
+        </activity>
+        <activity
+            android:name="com.intrepidusgroup.learner.Lesson3Activity"
+            android:icon="@drawable/ic_lesson3"
+            android:label="@string/title_activity_lesson3"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.intrepidusgroup.learner.LessonSelectorActivity" />
+        </activity>
+        <activity
+            android:name="com.intrepidusgroup.learner.Lesson3HandlerActivity"
+            android:label="@string/title_activity_lesson3_handler" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.intrepidusgroup.learner.Lesson3Activity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="iglearner" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.intrepidusgroup.learner.Lesson4Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:icon="@drawable/ic_lesson4"
+            android:label="@string/title_activity_lesson4"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.intrepidusgroup.learner.LessonSelectorActivity" />
+        </activity>
+        <activity
+            android:name="com.intrepidusgroup.learner.Lesson5Activity"
+            android:icon="@drawable/ic_lesson5"
+            android:label="@string/title_activity_lesson5"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.intrepidusgroup.learner.LessonSelectorActivity" />
+        </activity>
+        <activity
+            android:name="com.intrepidusgroup.learner.Lesson6Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:icon="@drawable/ic_lesson6"
+            android:label="@string/title_activity_lesson6"
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.intrepidusgroup.learner.LessonSelectorActivity" />
+        </activity>
+        <activity
+            android:name="com.intrepidusgroup.learner.Lesson7"
+            android:icon="@drawable/ic_lesson7"
+            android:label="@string/title_activity_lesson7" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.intrepidusgroup.learner.LessonSelectorActivity" />
+        </activity>
+        <activity
+            android:name="com.intrepidusgroup.learner.Lesson7Activity"
+            android:icon="@drawable/ic_lesson7"
+            android:label="@string/title_activity_lesson7" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.intrepidusgroup.learner.LessonSelectorActivity" />
+        </activity>
+
+        <provider
+            android:name="com.intrepidusgroup.learner.Lesson7ContentProvider"
+            android:authorities="com.intrepidusgroup.learner.contentprovider"
+            android:label="Lesson7ContentProviderLabel" >
+        </provider>
+
+        <activity
+            android:name="com.intrepidusgroup.learner.Lesson8Activity"
+            android:icon="@drawable/ic_lesson8"
+            android:label="@string/title_activity_lesson8" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.intrepidusgroup.learner.LessonSelectorActivity" />
+        </activity>
+        <activity
+            android:name="com.intrepidusgroup.learner.Lesson8AuxActivity"
+            android:label="@string/title_activity_lesson8_aux" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.intrepidusgroup.learner.Lesson8Activity" />
+
+            <intent-filter>
+                <action android:name="com.intrepidusgroup.learner.custom.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.intrepidusgroup.learner.Lesson9Activity"
+            android:label="@string/title_activity_lesson_intro" >
+        </activity>
+    </application>
+
+</manifest>

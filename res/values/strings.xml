@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Learner</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+
+    <string-array name="Lessons">
+        <item>Lesson 1</item>
+        <item>Lesson 2</item>
+        <item>Lesson 3</item>
+        <item>Lesson 4</item>
+        <item>Lesson 5</item>
+        <item>Lesson 6</item>
+        <item>Lesson 7</item>
+        <item>Lesson 8</item>
+    </string-array>
+    <string-array name="LessonShortDescriptions">
+        <item>Android logging secrets</item>
+        <item>Screwy file permissions</item>
+        <item>URI handlers craziness </item>
+        <item>SSL Man in the Middle</item>
+        <item>Advanced SSL Man in the Middle</item>
+        <item>Encryption vs. Encraption</item>
+        <item>Providers shared with the world</item>
+        <item>Malicious intents</item>
+    </string-array>
+
+    <string name="title_activity_lesson1">Lesson1Activity</string>
+    <string name="lesson1Description">This lesson just dumped a whole bunch of output to the Android log. The secret code is lurking somewhere in there. Find it and when ready, enter the code in the provided box and press the "Submit" button to see if you are correct. </string>
+    <string name="lesson1ButtonSubmit">Submit</string>
+    <string name="lesson1SecretCode"></string>
+    <string name="popupChallengeSuccess">Congrats! The challenge is completed.</string>
+    <string name="popupChallengeFailure">Sorry, your answer is incorrect. Try again.</string>
+    <string name="challengeString">This is not garbage. The challenge value is: </string>
+    <string name="garbageLogString">This is garbage. The challenge value is: </string>
+    <string name="title_activity_lesson2">Lesson2Activity</string>
+    <string name="lesson2Description">In this lesson, we have created a world-writeable file somewhere in our app\'s directory. You need to reverse-engineer the app, find the file that we have created, and enter the name of the file. You can then use the box to check your answer. And hey, if you are on a rooted phone, pretend it\'s not rooted. It\'s not interesting otherwise :)</string>
+    <string name="lesson2ButtonSubmit">Check your answer!</string>
+    <string name="testString">this is a test</string>
+    <string name="title_activity_lesson3">Lesson3Activity</string>
+    <string name="lesson3Description">In the WebView that you see on the screen, we registered a handler for the URIs that start with iglearner:// . A sample URI is shown in the box. Go ahead and push the submit button to generate a URI in the WebView, and then click on the link to see what happens. The challenge will be completed if you  manage to manipulate the URI in a way that would change the field below to &quot;UNLOCKED&quot;. \n\nHint: you may want to decompile the app and look through the code for that.</string>
+    <string name="uriTestString">iglearner://www.intrepidusgroup.com/testme</string>
+    <string name="lockedString">LOCKED</string>
+    <string name="unlockedString">UNLOCKED. Challenge is completed.</string>
+    <string name="lesson3ButtonSubmit">Request URI</string>
+    <string name="title_activity_lesson3_handler">Lesson3HandlerActivity</string>
+    <string name="title_activity_lesson4">Lesson4Activity</string>
+    <string name="lesson4Description">In this lesson, you need to intercept the token that we are sending to our web server.  Enter the secret token and hit submit to see if you intercepted the correct token. \n\nHint: who can you trust?</string>
+    <string name="lesson4ResendString">Resend code</string>
+    <string name="sslTestURL">https://intrepidusgroup.com</string>
+    <string name="sslErrorMessage">Whoooops. Are you trying to man-in-the-middle me? Try again.</string>
+    <string name="sslSuccessMessage">success</string>
+    <string name="title_activity_lesson5">Lesson5Activity</string>
+    <string name="lesson5Description">In this lesson, you need to intercept the token that the lesson sent to our web server, except this time we pinned the SSL certificate to the domain name, so old tricks may not work anymore.  Enter the secret token and hit submit to see if you intercepted the correct token.\n\nHint: Google is your friend here. So is iSec Partners... </string>
+    <string name="lesson6Description">This lesson logged out an authentication token that was created based on something stored locally, specifically, your phone number and a static key. The goal is to figure out what encryption algorithm was used and locate the key, and then enter an authentication token for another number in the provided box. \n\nHint: if decompiling and reversing doesn\'t help you figure out how to create the token, there are a few shortcuts.</string>
+    <string name="lesson5ResendString">Resend code</string>
+    <string name="sslTestURL2">https://intrepidusgroup.com</string>
+    <string name="title_activity_lesson6">Lesson6Activity</string>
+    <string name="lesson6ButtonSubmit">Send string</string>
+    <string name="Lesson6Hint">Enter at least 8 characters of the encrypted string, case INsensitive</string>
+    <string name="Lesson6Hint2String">For your convenience, here\'s the encrypted string for your own phone number: </string>
+    <string name="title_activity_lesson7">Lesson7</string>
+    <string name="lesson7Description">In this lesson, our application has spinned up a data provider but in an insecure fashion.  Your goal is to find the password stored within the database. You\'ll know when you\'ve found it.\n\nHint: we really like mercury.</string>
+    <string name="title_activity_lesson8">Lesson8Activity</string>
+    <string name="lesson8Description">In this lesson, we\'ll go over the importance of securing exported application activities. The lesson activity is going to advertise an intent filter that can be invoked by another application. Interception of this intent that is sent correctly will result in the app displaying a hidden menu inside the application.  Change the code of the aux8.apk application to cause this app to display a hidden screen.</string>
+    <string name="title_activity_lesson8_aux">Lesson8AuxActivity</string>
+    <string name="debugString">DEBUG SCREEN!</string>
+    <string name="wrongIntentString">Looks like a wrong intent!</string>
+    <string name="lesson8IntentActionString">com.intrepidusgroup.learner.custom.intent.action.SEND</string>
+    <string name="title_activity_lesson_intro">LessonIntroActivity</string>
+    <string name="stringInstructions">See instructions</string>
+    <string name="stringStartLesson">Start lesson</string>
+    <string name="lesson6NewChallengeNumberString">Challenge phone number: </string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+
+</resources>

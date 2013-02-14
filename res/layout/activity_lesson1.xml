@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Lesson1Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lesson1Activity" >
+
+    <RelativeLayout
+        android:id="@+id/Lesson1ControlLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        
+        <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"
+        android:onClick="lesson1OnSubmitClick"
+        android:text="@string/lesson1ButtonSubmit" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:text="@string/lesson1SecretCode" android:inputType="text">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/TextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="47dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:freezesText="false"
+        android:gravity="center"
+        android:linksClickable="false"
+        android:longClickable="false"
+        android:selectAllOnFocus="false"/>
+        
+    </RelativeLayout>
+
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+         <SlidingDrawer
+             android:id="@+id/slidingDrawer1"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:allowSingleTap="true"
+             android:content="@+id/content"
+             android:handle="@+id/handle"
+             android:paddingRight="10dp"
+             android:paddingTop="10dp"
+             android:rotation="180"
+             android:topOffset="45dp" >
+
+             <Button
+                 android:id="@+id/handle"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:ellipsize="none"
+                 android:gravity="center_vertical|center_horizontal|clip_vertical"
+                 android:minHeight="30sp"
+                 android:rotation="180"
+                 android:text="@string/stringInstructions"
+                 android:textColor="#91D685"
+                 android:visibility="visible" />
+
+             <LinearLayout
+                 android:id="@+id/content"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="#000000" >
+
+                 <TextView
+                     android:id="@+id/textView1"
+                     android:layout_width="match_parent"
+                     android:layout_height="306dp"
+                     android:layout_marginLeft="20dp"
+                     android:layout_marginRight="20dp"
+                     android:rotation="180"
+                     android:text="@string/lesson1Description"
+                     android:textSize="20sp" />
+
+             </LinearLayout>
+         </SlidingDrawer>
+
+    </RelativeLayout>
+
+</RelativeLayout>

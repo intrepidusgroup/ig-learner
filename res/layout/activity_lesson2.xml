@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lesson2Activity" >
+
+    <RelativeLayout
+        android:id="@+id/Lesson2ControlLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true" >
+
+        <Button
+        android:id="@+id/checkFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="82dp"
+        android:onClick="lesson2OnSubmitClick"
+        android:text="@string/lesson2ButtonSubmit" />
+
+    <EditText
+        android:id="@+id/lesson2FileNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkFile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="82dp"
+        android:ems="10"
+        android:inputType="text" />
+    </RelativeLayout>
+
+    
+
+     <RelativeLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" >
+
+         <SlidingDrawer
+             android:id="@+id/slidingDrawer2"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:allowSingleTap="true"
+             android:content="@+id/content"
+             android:handle="@+id/handle"
+             android:paddingRight="10dp"
+             android:paddingTop="10dp"
+             android:rotation="180"
+             android:topOffset="45dp" >
+
+             <Button
+                 android:id="@+id/handle"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:ellipsize="none"
+                 android:gravity="center_vertical|center_horizontal|clip_vertical"
+                 android:minHeight="30sp"
+                 android:rotation="180"
+                 android:text="@string/stringInstructions"
+                 android:textColor="#91D685"
+                 android:visibility="visible" />
+
+             <LinearLayout
+                 android:id="@+id/content"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="#000000" >
+
+                 <TextView
+                     android:id="@+id/textView1"
+                     android:layout_width="match_parent"
+                     android:layout_height="306dp"
+                     android:layout_marginLeft="20dp"
+                     android:layout_marginRight="20dp"
+                     android:rotation="180"
+                     android:text="@string/lesson2Description"
+                     android:textSize="20sp" />
+
+             </LinearLayout>
+         </SlidingDrawer>
+
+     </RelativeLayout>
+
+</RelativeLayout>

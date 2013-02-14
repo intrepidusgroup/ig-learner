@@ -1,0 +1,24 @@
+Author: Roman Faynberg, Intrepidus Group
+2/14/2013
+
+This is a "capture the flag" style trainer app that will help familiarize you with the basics of Android security. The application is divided into lessons; feel free to go through the lessons in any order you wish.
+
+Please note that you may want to download an auxiliary application for Lesson 8. It will be posted to the Google Play shortly.
+
+For those of you who are stuck - we will be posting a walk-through soon for IGLearner, please check back at https://www.intrepidusgroup.com/insight
+
+Some tips on what tools can be useful when you are taking this app apart:
+
+- Android SDK
+- apktool
+- Dex2Jar
+- JD-GUI
+- Any local HTTP proxy - we like Burp Suite, but you can use anything you wish (Paros etc.)
+- Virtuous Ten Studio to look at the smali code
+
+Credits:
+Icons by Double-J design (http://www.doublejdesign.co.uk/products-page/icons/childish)
+SSL TrustManager code by Moxie Marlinspike <moxie@thoughtcrime.org>
+Parts of the Content Provider code taken from http://www.vogella.com
+
+
